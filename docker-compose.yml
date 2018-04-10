@@ -8,4 +8,4 @@ services:
     devices:
       - "/dev/rtc:/dev/rtc"
     cap_add:
-      - SYS_RAWIO
+      - SYS_TIME
