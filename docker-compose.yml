@@ -2,6 +2,9 @@ version: '2'
 services:
   rtc:
     build: ./rtc
+    # these two lines are needed for RTC control from the service,
+    # however they can be replaced with a single, broader "privileged: true"
+    # setup when appropriate
     devices:
       - "/dev/misc/rtc:/dev/misc/rtc"
     cap_add:
