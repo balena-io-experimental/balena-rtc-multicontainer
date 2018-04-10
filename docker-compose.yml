@@ -2,4 +2,7 @@ version: '2'
 services:
   rtc:
     build: ./rtc
-    privileged: true
+    devices:
+      - "/dev/misc/rtc:/dev/misc/rtc"
+    cap_add:
+      - SYS_RAWIO
