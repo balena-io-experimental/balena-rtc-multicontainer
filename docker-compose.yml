@@ -2,10 +2,10 @@ version: '2'
 services:
   rtc:
     build: ./rtc
-    # these two lines are needed for RTC control from the service,
+    # these two entries below are needed for RTC control from within the service,
     # however they can be replaced with a single, broader "privileged: true"
     # setup when appropriate
-#    devices:
-#      - "/dev/rtc:/dev/rtc"
+    devices:
+      - "/dev/rtc:/dev/rtc"
     cap_add:
       - SYS_TIME

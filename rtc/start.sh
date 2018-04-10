@@ -18,5 +18,5 @@ else
    echo "System time is ahead of RTC, not restoring"
 fi
 
-## Do the main payload
+## Do the main work, whatever it may be...
 while : ; do date; sleep "${INTERVAL:-15}"; done
