@@ -1,0 +1,3 @@
+FROM resin/%%RESIN_MACHINE_NAME%%-alpine
+
+CMD while : ; do date; sleep ${INTERVAL:-15}; done
