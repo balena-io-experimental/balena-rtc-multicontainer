@@ -2,3 +2,4 @@ version: '2'
 services:
   rtc:
     build: ./rtc
+    privileged: true
