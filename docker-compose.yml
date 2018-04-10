@@ -6,6 +6,6 @@ services:
     # however they can be replaced with a single, broader "privileged: true"
     # setup when appropriate
     devices:
-      - "/dev/misc/rtc:/dev/misc/rtc"
+      - "/dev/rtc:/dev/rtc"
     cap_add:
       - SYS_RAWIO
