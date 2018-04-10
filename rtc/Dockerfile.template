@@ -1,3 +1,6 @@
 FROM resin/%%RESIN_MACHINE_NAME%%-alpine
 
-CMD echo "Setting System clock from RTC"; hwclock --hctosys; while : ; do date; sleep ${INTERVAL:-15}; done
+WORKDIR /usr/src/app
+COPY start.sh .
+
+CMD ["bash", "start.sh"]
